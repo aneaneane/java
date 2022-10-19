@@ -1,0 +1,35 @@
+import javax.swing.JOptionPane;
+
+public class Ag08 {
+    public static void main(String[] args) {
+        int contador = 1, idade, somaidade = 0, otimo = 0, avaliacaoRuim = 0, media;
+        float porcentagem, pessimo = 0;
+        String resposta;
+
+        do {
+            idade = Integer.parseInt(JOptionPane.showInputDialog("Por favor, informe sua idade em números:"));
+            resposta = JOptionPane.showInputDialog("Deixe sua avaliação: " +
+                    "A - Ótimo /  B - Bom / C - Regular  / D - Ruim  / E -  Péssimo.");
+            contador += 1;
+
+            switch (resposta) {
+                case "A":
+                    otimo++;
+                    break;
+                case "E":
+                    pessimo++;
+                    break;
+                case "D":
+                    avaliacaoRuim++;
+                    somaidade += idade;
+                    break;
+            }
+        } while (contador <= 40);
+
+        JOptionPane.showMessageDialog(null, otimo + " " + "Pessoas avaliaram como Ótimo.");
+        media = somaidade / avaliacaoRuim;
+        JOptionPane.showMessageDialog(null, "A média de idade das pessoas que avaliaram como ruim é de: " + media + " " + "anos");
+        porcentagem = pessimo / 40 * 100;
+        JOptionPane.showMessageDialog(null, "A porcentagem de pessoas que avaliaram como péssiomo é: " + porcentagem + "%");
+    }
+}
