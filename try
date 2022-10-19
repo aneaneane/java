@@ -1,0 +1,18 @@
+import javax.swing.JOptionPane;
+
+public class Ag06Ex02 {
+    public static void main(String[] args) {
+
+        int numero;
+        String aux;
+
+        try {
+            aux = JOptionPane.showInputDialog("Entre com um número inteiro");
+            numero = Integer.parseInt(aux);
+            JOptionPane.showMessageDialog(null, "O número inserido foi " + numero);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Entre somente com um número inteiro",
+                    "E R R O", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+}
