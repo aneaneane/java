@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.util.Arrays;
 
-public class Ag10 {
+public class Matriz {
     public static void main(String[] args) {
         int[][] matriz = new int[5][5];
         int coluna, linha, soma = 0;
