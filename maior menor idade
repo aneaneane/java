@@ -1,0 +1,23 @@
+import javax.swing.JOptionPane;
+
+public class MaiorMenorIdade {
+    public static void main(String[] args) {
+        String nome;
+        int idade, dezoito = 0;
+
+        for (int i = 1; i <=10; i++) {
+            nome = JOptionPane.showInputDialog("Olá, por favor digite o nome da " + i + "ª pessoa: ");
+            idade = Integer.parseInt(JOptionPane.showInputDialog("Qual a idade de " + nome + "?"));
+            if (idade == 18) {
+                JOptionPane.showMessageDialog(null, "MAIOR DE IDADE");
+                dezoito += 1;
+            } else if (idade > 18) {
+                JOptionPane.showMessageDialog(null, "MAIOR DE IDADE");
+            } else {
+                JOptionPane.showMessageDialog(null, "MENOR DE IDADE");
+            }
+        }
+        JOptionPane.showMessageDialog(null, dezoito + " Pessoas tem 18 anos.");
+
+    }
+}
